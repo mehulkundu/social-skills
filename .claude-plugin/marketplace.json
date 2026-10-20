@@ -1,0 +1,35 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "social-skills",
+  "description": "Generic, draft-only skills for running Instagram, LinkedIn, X and YouTube accounts. One plugin per platform.",
+  "owner": {
+    "name": "Mehul Kundu",
+    "url": "https://github.com/mehulkundu"
+  },
+  "plugins": [
+    {
+      "name": "instagram",
+      "description": "13 Instagram skills: Reels with scored hooks and beat sheets, captions, carousels, stories, profile score, weekly plan, comments, replies, DMs, repurposing, niche research, audits and a humanizer.",
+      "source": "./plugins/instagram",
+      "category": "productivity"
+    },
+    {
+      "name": "linkedin",
+      "description": "13 LinkedIn skills: posts off 21 hook formulas, carousels, comments, replies, DMs, inbox triage, profile score, weekly plan, repurposing, audits, hook breakdowns, a story-bank interview and a humanizer.",
+      "source": "./plugins/linkedin",
+      "category": "productivity"
+    },
+    {
+      "name": "x",
+      "description": "11 X (Twitter) skills: single posts off 11 hook formulas, threads, replies and quote posts, event posts, hook breakdowns, profile rewrite, weekly plan, repurposing, audits, a story-bank interview and a humanizer.",
+      "source": "./plugins/x",
+      "category": "productivity"
+    },
+    {
+      "name": "youtube",
+      "description": "13 YouTube skills: scripts with scored hooks, title and thumbnail packaging, Shorts, SEO, chapters, edit lists, comments, community posts, retention, upload plans, niche research, channel pivots and audits.",
+      "source": "./plugins/youtube",
+      "category": "productivity"
+    }
+  ]
+}
