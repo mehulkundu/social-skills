@@ -1,10 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "social-skills",
-  "description": "Generic, draft-only skills for running Instagram, LinkedIn, X and YouTube accounts. One plugin per platform.",
   "owner": {
     "name": "Mehul Kundu",
     "url": "https://github.com/mehulkundu"
+  },
+  "metadata": {
+    "description": "Generic, draft-only skills for running Instagram, LinkedIn, X and YouTube accounts. One plugin per platform.",
+    "version": "1.0.0"
   },
   "plugins": [
     {
