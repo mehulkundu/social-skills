@@ -74,6 +74,9 @@ more than the hour.
 Paths like `./x/voice.md` above mean the account's workspace folder, found
 in this order so one account's voice never leaks into another's:
 
+0. Whatever the project's `CLAUDE.md` maps this platform to. A project (an
+   Obsidian vault, say) can list its own file names for the voice, plan,
+   log, swipe file, drafts folder and story bank. Use those exactly.
 1. `./x/` in the current project, if `./x/voice.md` exists (a project that
    runs several platforms or brands).
 2. The project root `./`, if `./voice.md` exists and the project's

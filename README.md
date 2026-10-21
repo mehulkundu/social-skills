@@ -23,6 +23,17 @@ In Claude Code:
 Install only the platforms you use. The repo is private, so Claude Code needs
 GitHub access to it (it uses your normal `git` credentials).
 
+From a downloaded zip instead: unzip it anywhere, then point the marketplace at
+the folder.
+
+```
+/plugin marketplace add ~/Downloads/social-skills
+/plugin install x@social-skills
+```
+
+Run `/plugin` afterwards to see what's installed, and `/reload-plugins` (or
+restart Claude Code) if the skills don't show up straight away.
+
 ## The plugins
 
 | plugin | skills |
@@ -39,8 +50,9 @@ Each skill is one folder with a `SKILL.md`, plus any Python tools it runs
 
 Every skill looks for the account's files in this order:
 
+0. Whatever the project's `CLAUDE.md` maps the platform to.
 1. `./<platform>/voice.md` in the project you opened Claude Code in. Use this
-   for a project that runs several accounts, like `workspaces/founder/` here.
+   for a project that runs several accounts.
 2. `./voice.md` at the project root, when the project's `CLAUDE.md` says it is
    that platform's account. That is how the one-account repos work
    (`instagram-dj`, `instagram-art`).
@@ -50,9 +62,10 @@ Plans, logs and swipe files are written next to the voice file. `story-bank.md`
 sits at the project root and is shared by every platform. Each plugin ships a
 `templates/voice.md` to start from.
 
-`workspaces/founder/` is the workspace for the designer & founder accounts
-(@KunduMehul, mehulkundu, @mehulkundu, @thatproductdude). Open Claude Code in
-that folder and every skill picks up the right voice for its platform.
+A project can also map each platform to its own file names in its `CLAUDE.md`
+(for example an Obsidian vault, where note names must be unique). The skills
+check that mapping first. Mehul's founder accounts work this way: their voice
+files, plans, drafts and content calendar live in the `obsidian` vault.
 
 ## Credits
 
@@ -73,6 +86,6 @@ Merged from four MIT-licensed skill packs, then extended:
   by Alireza Rezvani: X profile checklist and cadence by account size.
 
 New here: every `x-*` skill, `li-hook`, `li-interview`, `yt-community`,
-`yt-pivot`, the workspace lookup and the founder workspace.
+`yt-pivot` and the workspace lookup.
 
 MIT. See `LICENSE`.
