@@ -4,6 +4,10 @@ Copy this to `./instagram/voice.md` and fill it in. Every skill in the
 pack reads it. Ten minutes here is the difference between scripts you shoot and
 scripts you rewrite.
 
+This file covers how you sound and what you post on Instagram. Facts that hold on
+every platform (who you are, your goals, what you never claim) go once in
+`./persona.md` at the project root, so all your platforms share them.
+
 If you would rather not fill it in by hand, send Claude three of your own reels
 or captions and say "write my voice.md from these". That works better than
 guessing at the answers.

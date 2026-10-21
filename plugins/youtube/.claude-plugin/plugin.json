@@ -1,7 +1,7 @@
 {
   "name": "youtube",
   "description": "13 draft-only skills for running a YouTube account. They write, you post. Voice and plans live in a per-account workspace folder, so the same skills work for any account.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "Mehul Kundu",
     "url": "https://github.com/mehulkundu"

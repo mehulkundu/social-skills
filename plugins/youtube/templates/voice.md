@@ -4,6 +4,10 @@ Copy this to `./youtube/voice.md` and fill it in. Every skill in this pack reads
 minutes here is worth more than any prompt you will ever write, because on YouTube you have to say
 the words out loud and a script in the wrong voice is unreadable on camera.
 
+This file covers how you sound and what you post on YouTube. Facts that hold on
+every platform (who you are, your goals, what you never claim) go once in
+`./persona.md` at the project root, so all your platforms share them.
+
 ## Who I am talking to
 
 One person. Name them properly - not "creators", but "someone with under a thousand subs who has

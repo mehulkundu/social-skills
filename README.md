@@ -218,27 +218,38 @@ The first time you run a writing skill, it asks for three to six of your own
 posts and writes your `voice.md` from them. That's it. If you'd rather fill it in
 by hand, each plugin ships a [template](plugins/x/templates/voice.md).
 
+**Ground rule: one persona, one project.** A persona is one identity, like a
+founder, a DJ or an artist. Its Instagram, X, LinkedIn and YouTube accounts are
+the same persona on different platforms: the format and the style change, the
+persona doesn't. So keep each persona in one project, with a folder per
+platform. When the persona starts on a new platform, add a folder; don't start
+a new project. What's true everywhere (who you are, your goals, what you never
+claim) goes once in `persona.md` at the project root, and each platform's
+`voice.md` only says how you sound and what you post there.
+
 Skills look for the voice file in this order and use the first one they find:
 
 1. Whatever your project's `CLAUDE.md` maps the platform to
-2. `./<platform>/voice.md` in the folder you opened Claude Code in (good for running several accounts from one repo)
-3. `./voice.md`, when the project's `CLAUDE.md` says the whole project is one account
+2. `./<platform>/voice.md` in the folder you opened Claude Code in
+3. `./voice.md`, when the project's `CLAUDE.md` says the whole project is one account (older layout; the skills offer to move it into `./<platform>/`)
 4. `~/.claude/<platform>/voice.md` as a global default
 
-Plans, logs and swipe files are saved next to the voice file. `story-bank.md`
-sits at the project root and every platform draws from it, so the stories
-`/x-interview` pulls out of you show up in your LinkedIn posts too.
+They read `persona.md` first when it exists. Plans, logs and swipe files are
+saved next to the voice file. `story-bank.md` sits at the project root and every
+platform draws from it, so the stories `/x-interview` pulls out of you show up
+in your LinkedIn posts too.
 
 Keep your notes in Obsidian or similar, where file names must be unique? Map
 each platform to its own file names in `CLAUDE.md` and the skills check that
 first.
 
 <details>
-<summary><b>Example layout for one person running three platforms</b></summary>
+<summary><b>Example layout for one persona on three platforms</b></summary>
 
 ```
-my-content/
+founder/
 ├── CLAUDE.md
+├── persona.md             # true on every platform
 ├── story-bank.md          # shared by every platform
 ├── x/
 │   ├── voice.md
@@ -288,7 +299,8 @@ come from you, and every draft passes the humanizer before you see it. If
 something still sounds off, say "that doesn't sound like me" and it adjusts.
 
 **Can I use it for clients or several accounts?**
-Yes. Give each account its own folder with its own `voice.md`. Same install.
+Yes. Give each persona (each client, or each identity you run) its own project,
+and each of its platforms a folder with its own `voice.md`. Same install.
 
 **I only care about one platform.**
 Install just that plugin. They don't depend on each other.

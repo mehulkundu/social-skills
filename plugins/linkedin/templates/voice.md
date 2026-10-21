@@ -4,6 +4,10 @@ Copy this to `./linkedin/voice.md` and fill it in. Every skill in the
 pack reads it. Ten minutes here is the difference between drafts you post and
 drafts you rewrite.
 
+This file covers how you sound and what you post on LinkedIn. Facts that hold on
+every platform (who you are, your goals, what you never claim) go once in
+`./persona.md` at the project root, so all your platforms share them.
+
 If you would rather not fill it in by hand, paste three of your own posts into
 Claude and say "write my voice.md from these". That works better than guessing
 at the answers.
