@@ -1,0 +1,68 @@
+{
+  "format": ["reel", "short"],
+  "fps": 24,
+  "chrome": {
+    "title": "social-skills */* real runs",
+    "footer": "50 Claude Code skills · X · LinkedIn · Instagram · YouTube"
+  },
+  "beats": [
+    {"start": 0, "end": 2.9, "text": "Steal the skills running my 8 accounts. Free."},
+    {"start": 2.9, "end": 3.6, "text": "Yo folks."},
+    {"start": 3.6, "end": 7.6, "text": "Most people use AI to write one post and stop there."},
+    {"start": 7.6, "end": 10.2, "text": "Mine got 50 skills. It runs everything."},
+    {"start": 10.2, "end": 13.8, "text": "For one account it pulled 90 reels from 11 creators."},
+    {"start": 13.8, "end": 15.3, "text": "Then planned my week."},
+    {"start": 15.3, "end": 16.4, "text": "Writes every script."},
+    {"start": 16.4, "end": 20.4, "text": "Give it one long video and get 7 days of posts."},
+    {"start": 20.4, "end": 21.4, "text": "Drafts my DMs."},
+    {"start": 21.4, "end": 22.9, "text": "Tells me what flopped."},
+    {"start": 22.9, "end": 26.2, "text": "It learns how you talk from 3 old posts."},
+    {"start": 26.2, "end": 28.0, "text": "Everything but the post button."},
+    {"start": 28.0, "end": 30.6, "text": "Link's in my bio. Go steal them.", "only": "reel"},
+    {"start": 28.0, "end": 30.6, "text": "Link's on my channel. Go steal them.", "only": "short"}
+  ],
+  "scenes": [
+    {"type": "bigtype", "start": 0, "end": 3.6, "data": {"text": "50 skills.\n8 accounts.\n*Free.*"}},
+    {"type": "doc", "start": 3.6, "end": 7.6, "data": {"cmd": "most people", "what": "one prompt", "file": "post_final_v2.txt", "note": "1 post. then they stop."}},
+    {"type": "chips", "start": 7.6, "end": 10.2, "data": {"cmd": "/50 skills", "what": "one per job", "chips": [
+      "/ig-viral", "/ig-plan", "/ig-reel", "/ig-caption", "/ig-carousel", "/ig-story", "/ig-human", "/ig-comment", "/ig-reply", "/ig-dm",
+      "/ig-repurpose", "/ig-profile", "/ig-audit", "/li-post", "/li-carousel", "/li-hook", "/li-comment", "/li-reply", "/li-dm", "/li-inbox",
+      "/li-plan", "/li-repurpose", "/li-profile", "/li-interview", "/li-human", "/li-audit", "/x-post", "/x-thread", "/x-hook", "/x-reply",
+      "/x-event", "/x-plan", "/x-repurpose", "/x-profile", "/x-interview", "/x-human", "/x-audit", "/yt-script", "/yt-package", "/yt-shorts",
+      "/yt-seo", "/yt-chapters", "/yt-edit", "/yt-retention", "/yt-comment", "/yt-community", "/yt-plan", "/yt-viral", "/yt-pivot", "/yt-audit"
+    ]}},
+    {"type": "rows", "start": 10.2, "end": 13.8, "data": {"cmd": "/ig-viral", "what": "find what's working", "sub": "90 reels · 11 accounts · vs own median", "foot": "→ swipe.md written", "rows": [
+      {"value": "725.9x", "name": "no formula yet", "handle": "@ll•••"},
+      {"value": "538.4x", "name": "cultural switch", "handle": "@sk•••"},
+      {"value": "336.5x", "name": "cultural switch", "handle": "@sk•••"},
+      {"value": "277.9x", "name": "The Verbatim Question", "handle": "@sk•••"}
+    ]}},
+    {"type": "week", "start": 13.8, "end": 15.3, "data": {"cmd": "/ig-plan", "what": "plan the week", "sub": "built from: voice.md, swipe.md", "days": [
+      {"day": "MON", "time": "7:30pm", "kind": "REEL", "what": "#11 Numbered w/ Fav"},
+      {"day": "TUE", "what": "stories + engage"},
+      {"day": "WED", "what": "stories + engage"},
+      {"day": "THU", "time": "7:30pm", "kind": "REEL", "what": "#20 Permission"},
+      {"day": "FRI", "what": "stories + engage"},
+      {"day": "SAT", "what": "stories + engage"},
+      {"day": "SUN", "time": "1:00pm", "kind": "REEL", "what": "POV"}
+    ]}},
+    {"type": "hooks", "start": 15.3, "end": 16.4, "data": {"cmd": "/ig-reel", "what": "hooks scored, script timed", "foot": "beat sheet · 13 beats · 30.6s · loops on \"steal\"", "hooks": [
+      {"score": 81.4, "verdict": "STRONG", "text": "Nobody tells you your AI can run all 8 of your accounts."},
+      {"score": 79.6, "verdict": "STRONG", "text": "Steal the skills running my 8 accounts. Free.", "tag": "shipped"},
+      {"score": 39.2, "verdict": "WEAK", "text": "One idea in. A week of posts out. Watch."}
+    ]}},
+    {"type": "fanout", "start": 16.4, "end": 20.4, "data": {"cmd": "/ig-repurpose", "what": "one video in", "count": "1", "from": "long video", "to": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]}},
+    {"type": "chat", "start": 20.4, "end": 21.4, "data": {"cmd": "/ig-dm · /li-dm", "what": "drafted, you send", "note": "draft · not sent"}},
+    {"type": "rubric", "start": 21.4, "end": 22.9, "data": {"cmd": "/ig-profile", "what": "scored, then rewritten", "foot": "22 of 66 → bio, pins, link rewritten", "rows": [
+      {"label": "bio first line", "got": 3, "max": 12},
+      {"label": "bio body", "got": 1, "max": 8},
+      {"label": "pinned three", "got": 0, "max": 10},
+      {"label": "link", "got": 5, "max": 8}
+    ]}},
+    {"type": "human", "start": 22.9, "end": 26.2, "data": {"cmd": "/ig-human", "what": "before you see it", "sub": "reel script · a staged reveal, caught",
+      "before": "One long video? 7 days of posts.", "after": "Give it one long video and get 7 days of posts.", "from": 59.3, "to": 78.5, "pass": 70}},
+    {"type": "end", "start": 26.2, "end": 28.0, "data": {"line": "Everything except\nthe post button.", "button": "Post", "sub": "that part's yours"}},
+    {"type": "link", "start": 28.0, "end": 30.6, "only": "reel", "data": {"line": "Link in\nmy bio.", "url": "mehulkundu.com/products/social-skills"}},
+    {"type": "link", "start": 28.0, "end": 30.6, "only": "short", "data": {"line": "Link on\nmy channel.", "url": "github.com/mehulkundu/social-skills"}}
+  ]
+}

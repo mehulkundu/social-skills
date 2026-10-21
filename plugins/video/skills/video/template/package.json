@@ -1,0 +1,11 @@
+{
+  "name": "video-studio",
+  "private": true,
+  "description": "This account's video studio. Brand in brand.json, the video being made in props.json.",
+  "dependencies": {
+    "@remotion/cli": "4.0.537",
+    "react": "19.2.9",
+    "react-dom": "19.2.9",
+    "remotion": "4.0.537"
+  }
+}

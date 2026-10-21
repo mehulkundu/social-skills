@@ -1,0 +1,23 @@
+{
+  "colors": {
+    "bg": "oklch(0.19 0.015 60)",
+    "ink": "oklch(0.95 0.012 90)",
+    "accent": "oklch(0.76 0.14 55)",
+    "muted": "oklch(0.68 0.015 80)",
+    "line": "oklch(0.36 0.015 70)",
+    "track": "oklch(0.32 0.015 70)",
+    "soft": "oklch(0.28 0.015 65)",
+    "card": "oklch(0.235 0.015 65)",
+    "good": "oklch(0.76 0.15 150)",
+    "bad": "oklch(0.7 0.19 28)"
+  },
+  "background": "radial-gradient(110% 70% at 15% 0%, oklch(0.33 0.07 45) 0%, transparent 60%), radial-gradient(90% 60% at 100% 100%, oklch(0.27 0.06 270) 0%, transparent 65%), oklch(0.18 0.015 60)",
+  "type": {"display": "Instrument Serif", "body": "Petrona", "mono": "Geist Mono"},
+  "fonts": [
+    {"family": "Instrument Serif", "file": "fonts/instrument-serif-latin-400-normal.woff2"},
+    {"family": "Instrument Serif", "file": "fonts/instrument-serif-latin-400-italic.woff2", "style": "italic"},
+    {"family": "Petrona", "file": "fonts/petrona-latin-wght-normal.woff2", "weight": "100 900"},
+    {"family": "Geist Mono", "file": "fonts/geist-mono-latin-wght-normal.woff2", "weight": "100 900"}
+  ],
+  "radius": 24
+}
