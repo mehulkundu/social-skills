@@ -2,9 +2,9 @@
 
 # social-skills
 
-**50 Claude Code skills that write your Instagram, LinkedIn, X and YouTube content in your own voice, then strip out everything that makes it read like AI.**
+**Give your AI agent these 50 skills and it runs your Instagram, LinkedIn, X and YouTube. It finds what's working, plans the week, writes every post, drafts the replies and audits what flopped, in your own voice.**
 
-They write. You post.
+It does everything except press post.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-black.svg)](LICENSE)
 [![Claude Code plugin](https://img.shields.io/badge/Claude_Code-plugin_marketplace-d97757.svg)](https://code.claude.com/docs/en/plugins)
@@ -17,15 +17,21 @@ They write. You post.
 
 ---
 
-Most AI writing tools give you the same voice as everyone else using them. You
-can spot it in one line: the em dashes, "delve", "in today's fast-paced world",
-"it's not just X, it's Y".
+Most people use AI to write one post. social-skills hands your agent the rest
+of the job.
 
-social-skills works the other way round. Every skill starts from a `voice.md`
-file built from your own past posts, pulls facts only from you (it will leave a
-`{{fact}}` gap before it invents a number), drafts against proven hook formulas
-for that platform, and runs the result through a humanizer that scores it before
-you ever see it.
+- **Finds what's working.** `/ig-viral` and `/yt-viral` rank the reels and videos in your niche by how far each one beat its own account's median, and name the hook behind it.
+- **Plans the week:** what to post, in which format, when, and who to engage with.
+- **Makes the posts** off 11 to 26 hook formulas per platform. Tweets and threads, LinkedIn posts and carousel PDFs, reel scripts with timed beat sheets, 1080x1350 carousel slides, YouTube scripts, titles, thumbnail text, descriptions and chapters.
+- **Repurposes.** One long video becomes Shorts, an edit list for the dead air, and a week of posts for every other platform.
+- **Engages.** Comments on other people's posts, replies to yours sorted by which deserve one, DMs, and a LinkedIn inbox sorted into leads, recruiters, peers and spam.
+- **Audits.** Profiles scored out of 100 on a 12-part rubric, post-mortems on what to stop, and where viewers really leave in a YouTube retention export.
+
+And it sounds like you. Every skill starts from a `voice.md` built from 3 to 6 of
+your own past posts and takes facts only from you. It'll leave a `{{fact}}` gap
+before it invents a number. Then a humanizer scores each draft before you see it
+and strips or flags the AI accent: the em dashes, "delve", "it's not just X,
+it's Y".
 
 - **One plugin per platform.** Install only the ones you use.
 - **Draft-only.** No API keys, no logins, no posting service. Nothing leaves your machine unless you copy it.
