@@ -57,14 +57,14 @@ const Footage = ({d, start, fit}: {d: any; start: number; fit: string}) => {
 };
 
 // Footage that isn't in a card: "full" fills the frame, "bubble" is a face cam circle.
-export const Clip = ({d, start, square, look}: {d: any; start: number; square: boolean; look: object}) => {
+export const Clip = ({d, start, bubble, look}: {d: any; start: number; bubble: any; look: object}) => {
   if (d.layout !== 'bubble')
     return (
       <AbsoluteFill>
         <Footage d={d} start={start} fit="cover" />
       </AbsoluteFill>
     );
-  const [left, top, size] = square ? [64, 640, 260] : [72, 1100, 320];
+  const {left, top, size} = bubble;
   return (
     <div className="face" style={{left, top, width: size, height: size, ...look}}>
       <Footage d={d} start={start} fit="cover" />

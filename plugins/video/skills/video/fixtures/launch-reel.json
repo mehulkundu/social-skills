@@ -1,5 +1,5 @@
 {
-  "format": ["reel", "short"],
+  "format": ["reel", "short", "wide"],
   "fps": 24,
   "chrome": {
     "title": "social-skills */* real runs",
@@ -19,7 +19,8 @@
     {"start": 22.9, "end": 26.2, "text": "It learns how you talk from 3 old posts."},
     {"start": 26.2, "end": 28.0, "text": "Everything but the post button."},
     {"start": 28.0, "end": 30.6, "text": "Link's in my bio. Go steal them.", "only": "reel"},
-    {"start": 28.0, "end": 30.6, "text": "Link's on my channel. Go steal them.", "only": "short"}
+    {"start": 28.0, "end": 30.6, "text": "Link's on my channel. Go steal them.", "only": "short"},
+    {"start": 28.0, "end": 30.6, "text": "Link's in the description. Go steal them.", "only": "wide"}
   ],
   "scenes": [
     {"type": "bigtype", "start": 0, "end": 3.6, "data": {"text": "50 skills.\n8 accounts.\n*Free.*"}},
@@ -63,6 +64,7 @@
       "before": "One long video? 7 days of posts.", "after": "Give it one long video and get 7 days of posts.", "from": 59.3, "to": 78.5, "pass": 70}},
     {"type": "end", "start": 26.2, "end": 28.0, "data": {"line": "Everything except\nthe post button.", "button": "Post", "sub": "that part's yours"}},
     {"type": "link", "start": 28.0, "end": 30.6, "only": "reel", "data": {"line": "Link in\nmy bio.", "url": "mehulkundu.com/products/social-skills"}},
-    {"type": "link", "start": 28.0, "end": 30.6, "only": "short", "data": {"line": "Link on\nmy channel.", "url": "github.com/mehulkundu/social-skills"}}
+    {"type": "link", "start": 28.0, "end": 30.6, "only": "short", "data": {"line": "Link on\nmy channel.", "url": "github.com/mehulkundu/social-skills"}},
+    {"type": "link", "start": 28.0, "end": 30.6, "only": "wide", "data": {"line": "Link in the\ndescription.", "url": "github.com/mehulkundu/social-skills"}}
   ]
 }

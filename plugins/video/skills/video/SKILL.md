@@ -1,15 +1,15 @@
 ---
 name: video
 description: >-
-  Make a social video in the user's own brand with Remotion - a 1080x1080
-  square for X and LinkedIn, or a 1080x1920 Reel or Short - from what the
-  other skills already produced (the /ig-reel script and beats.py timings,
-  hookscore.py rankings, READY cards, humanizer scores) and the user's own
+  Make a social video in the user's own brand with Remotion - 1:1 square,
+  9:16 vertical or 16:9 wide - from what the other skills already produced
+  (the /ig-reel script and beats.py timings, hookscore.py rankings, READY
+  cards, humanizer scores) and the user's own
   footage (talking head, screen recordings). Writes one props.json, shows it
   live in Remotion Studio and renders an MP4. Use when the user says "make a
   video", "turn this into a reel", "animate this", "cut my recording", "put my
-  screen recording in", "launch video", or wants a Reel, a Short or a square
-  video. Renders a file; the user posts it.
+  screen recording in", "launch video", or wants a vertical, square or
+  landscape video. Renders a file; the user posts it.
 ---
 
 # video
@@ -18,16 +18,16 @@ Turns real output and real footage into a branded video, without writing
 animation code for each one. You write a small `props.json`. The studio's
 templates draw every frame.
 
-The studio is a Remotion project that lives **in the user's own repo**, next
-to their `voice.md`. It holds their brand, their footage and every video
-they've made. Nothing is installed into this plugin: plugin updates replace
+The studio is a Remotion project that lives **in the user's own repo**, at
+the root of the persona's project. It holds their brand, their footage and
+every video they've made. Nothing is installed into this plugin: plugin updates replace
 the plugin folder, and each user's brand belongs in their own copy.
 
 ```bash
 bash setup.sh <workspace>/video                     # first time only
 npx remotion studio                                  # live editor, http://localhost:3000
 npx remotion still Reel out/f48.png --frame=48 --props=props.json
-npx remotion render Reel out/my-video.mp4 --props=props.json
+npx remotion render Wide out/my-video.mp4 --props=props.json
 ```
 
 `setup.sh` is in this folder. Every other command runs inside the studio
@@ -48,15 +48,16 @@ videos are for a company.
 
 ## Where the studio lives
 
-Same lookup every skill uses for `voice.md`. Take the first that applies:
+**One persona, one project, one studio.** A video isn't tied to a platform,
+so the studio isn't either. It sits at the root of the persona's project,
+beside `persona.md` and the platform folders, and every video for that persona
+is made in it. Take the first that applies:
 
 0. Whatever the project's `CLAUDE.md` maps `video` to.
-1. A studio that already exists: `./video/` or `./<platform>/video/` with a
-   `package.json` in it. **One studio per brand.** If the project already
-   has one, use it for every platform.
-2. A new one next to the voice file the video is for: `./<platform>/video/`
-   when `./<platform>/voice.md` exists, `./video/` when `./voice.md` is this
-   project's account, `~/.claude/video/` otherwise.
+1. A studio that already exists in the project: `./video/` (or an older
+   `./<platform>/video/`) with a `package.json` in it.
+2. A new `./video/` at the project root.
+3. `~/.claude/video/` only when the folder isn't a persona's project at all.
 
 Then run `bash setup.sh <that folder>`. It copies the template, runs
 `npm install` there and refuses to install anywhere inside the plugin. An
@@ -81,7 +82,8 @@ video/
 A new studio starts in the paper-and-terracotta look. Make it theirs before
 the first video:
 
-- **Colours.** Ask, or read them off their site, profile or last carousel.
+- **Colours.** Check `persona.md` first, then ask, or read them off their
+  site, profile or last carousel.
   Set `colors` in `brand.json`: `bg`, `ink` (text), `accent`, `muted`,
   `line`, `track`, `soft`, `card`, `good`, `bad`.
 - **Background.** `background` takes any CSS background: a flat colour, a
@@ -118,11 +120,18 @@ panel's JSON tab shows everything) and put it in `props.json` yourself.
 }
 ```
 
-- **format** is `square` (1080x1080, for X and LinkedIn), `reel` (1080x1920)
-  or `short` (1080x1920, the reel with a channel-link ending). A list makes
-  one file serve several. Give an item `"only": "short"` and it appears in
-  that format alone. That's how one file ends "Link in my bio" as a Reel
-  and "Link on my channel" as a Short.
+- **format** is the shape, and any shape can go anywhere the user posts it:
+
+  | format | size | shape |
+  | --- | --- | --- |
+  | `square` | 1080x1080 | 1:1 |
+  | `reel` | 1080x1920 | 9:16 |
+  | `short` | 1080x1920 | 9:16, a second vertical cut with a different ending |
+  | `wide` | 1920x1080 | 16:9, captions on the left and cards on the right |
+
+  A list makes one file serve several. Give an item `"only": "short"` and it
+  appears in that format alone. That's how the launch fixture ends "Link in
+  my bio", "Link on my channel" and "Link in the description" from one file.
 - **fps** is 30 by default. Match the footage if there is any. The length is
   the last `end`, or set `duration` in seconds.
 - **chrome** is the frame around the scenes: a title (`*x*` is the accent
@@ -132,7 +141,7 @@ panel's JSON tab shows everything) and put it in `props.json` yourself.
 - **scenes** play between `start` and `end` seconds. Later scenes draw on top,
   so they can overlap: a card over a talking head, say.
 - **brand** overrides `brand.json` for this one video.
-- **guides** shades the areas a Reel's interface covers. Use it for checking,
+- **guides** shades the areas an app's interface covers on 9:16. Use it for checking,
   and take it out before the final render.
 
 ### Scene types
@@ -211,8 +220,8 @@ the video:
   happened, copied exactly. Never invent a score, a multiple, a count or a
   handle. A beat with no real run behind it gets a plain graphic (`bigtype`,
   `doc`, `fanout`, `chat`), never made-up output.
-- **Safe zone.** On a Reel or Short, everything stays between y=230 and
-  y=1440 and clear of the right 230px. The cards, captions and chrome already
+- **Safe zone.** On 9:16, everything stays between y=230 and y=1440 and
+  clear of the right 230px. The cards, captions and chrome already
   sit there. Check anything new, such as text in their footage, with
   `"guides": true`.
 - **The hook is on screen at frame 1.** Anything starting at 0 doesn't fade in.
@@ -229,12 +238,12 @@ the video:
    runs, the footage. If a beat needs a number nobody has run, it gets a plain
    graphic.
 3. **Write `props.json`** and start the Studio so the user can watch.
-4. **Check stills.** `npx remotion still <Square|Reel|Short> out/f<n>.png
+4. **Check stills.** `npx remotion still <Square|Reel|Short|Wide> out/f<n>.png
    --frame=<n> --props=props.json` at frame 0, at a settled moment in every
    scene (about 70% of the way through it), and at the last frame. Look at
    every one. Fix text running out of a card, overlaps and anything in the
    shaded guides, then check again.
-5. **Render.** `npx remotion render <Square|Reel|Short> out/<slug>.mp4
+5. **Render.** `npx remotion render <Square|Reel|Short|Wide> out/<slug>.mp4
    --props=props.json`, then copy `props.json` to `videos/<slug>.json`.
 6. **Print the block:**
 

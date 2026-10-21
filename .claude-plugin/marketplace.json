@@ -7,7 +7,7 @@
   },
   "metadata": {
     "description": "Generic, draft-only skills for running Instagram, LinkedIn, X and YouTube accounts. One plugin per platform.",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
@@ -36,7 +36,7 @@
     },
     {
       "name": "video",
-      "description": "Optional add-on, not one of the 50: /video makes square videos, Reels and Shorts in your own brand with Remotion, from real skill output and your own footage. The only plugin with dependencies (Node 18+).",
+      "description": "Optional add-on, not one of the 50: /video makes square, vertical and wide videos (1:1, 9:16, 16:9) in your own brand with Remotion, from real skill output and your own footage. The only plugin with dependencies (Node 18+).",
       "source": "./plugins/video",
       "category": "productivity"
     }

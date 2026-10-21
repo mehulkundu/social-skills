@@ -10,16 +10,34 @@ export const FORMATS = {
   square: {width: 1080, height: 1080},
   reel: {width: 1080, height: 1920},
   short: {width: 1080, height: 1920},
+  wide: {width: 1920, height: 1080},
 };
 
-// Where the cards sit. Reels and Shorts keep everything between y=230 and y=1440 and
-// clear of the right 230px: the app's caption, buttons and audio strip cover the rest.
-// Cards are laid out small and zoomed up, so they stay legible at phone size.
-const BOX = {
-  square: {left: 64, top: 150, width: 952, height: 720, zoom: 1.45},
-  tall: {left: 72, top: 560, width: 778, height: 830, zoom: 1.3},
+// Where everything sits in each shape. Cards are laid out small and zoomed up, so they
+// stay legible at phone size. Reels and Shorts keep everything between y=230 and y=1440
+// and clear of the right 230px: the app's caption, buttons and audio strip cover the rest.
+// Wide puts captions on the left and the card on the right, or the card in the middle
+// when there are no captions.
+const LAYOUT: Record<string, any> = {
+  square: {
+    box: {left: 64, top: 150, width: 952, height: 720, zoom: 1.45},
+    title: {left: 64, top: 46, fontSize: 54}, tag: {right: 64, top: 70}, footer: {left: 64, bottom: 44},
+    bubble: {left: 64, top: 640, size: 260},
+  },
+  tall: {
+    box: {left: 72, top: 560, width: 778, height: 830, zoom: 1.3},
+    title: {left: 72, top: 246, fontSize: 42}, tag: {right: 230, top: 262}, footer: {left: 72, top: 1404, width: 778, fontSize: 22},
+    cap: {left: 72, top: 330, width: 778, fontSize: 70},
+    bubble: {left: 72, top: 1100, size: 320},
+    unsafe: [[0, 0, 1080, 230], [0, 1440, 1080, 480], [850, 230, 230, 1210]],
+  },
+  wide: {
+    box: {left: 940, top: 170, width: 884, height: 740, zoom: 1.25},
+    title: {left: 96, top: 64, fontSize: 52}, tag: {right: 96, top: 88}, footer: {left: 96, bottom: 64},
+    cap: {left: 96, top: 300, width: 760, fontSize: 80},
+    bubble: {left: 96, top: 640, size: 300},
+  },
 };
-const UNSAFE = [[0, 0, 1080, 230], [0, 1440, 1080, 480], [850, 230, 230, 1210]];
 
 // beats.py --json rows carry dur rather than end, so they can be pasted in as they are
 const endOf = (x: any) => x.end ?? x.start + x.dur;
@@ -53,7 +71,7 @@ const useFonts = (fonts: any[]) => {
   }, [key]);
 };
 
-const Scene = ({s, square, last}: {s: any; square: boolean; last: boolean}) => {
+const Scene = ({s, lay, box, last}: {s: any; lay: any; box: any; last: boolean}) => {
   const {fps} = useVideoConfig();
   const t = useCurrentFrame() / fps, len = endOf(s) - s.start, d = s.data ?? {};
   // anything that starts at 0 is fully on screen at frame 1
@@ -61,25 +79,25 @@ const Scene = ({s, square, last}: {s: any; square: boolean; last: boolean}) => {
   const fout = last ? 1 : 1 - ease((t - (len - 0.2)) / 0.2);
   const look = {opacity: Math.min(fin, fout), transform: `translateY(${(1 - fin) * 18}px)`};
   const L = t / Math.max(0.1, Math.min(1, (len - 0.3) / 1.9));
-  if (s.type === 'clip' && d.layout !== 'framed') return <Clip d={d} start={s.start} square={square} look={d.layout === 'bubble' ? look : {}} />;
+  if (s.type === 'clip' && d.layout !== 'framed') return <Clip d={d} start={s.start} bubble={lay.bubble} look={d.layout === 'bubble' ? look : {}} />;
   const Body = SCENES[s.type];
   if (!Body) throw new Error(`Unknown scene type "${s.type}". This studio has: ${Object.keys(SCENES).join(', ')}`);
-  const b = square ? BOX.square : BOX.tall, z = b.zoom;
+  const z = box.zoom;
   return (
-    <div style={{position: 'absolute', zoom: z, left: b.left / z, top: b.top / z, width: b.width / z, height: b.height / z, ...look}}>
+    <div style={{position: 'absolute', zoom: z, left: box.left / z, top: box.top / z, width: box.width / z, height: box.height / z, ...look}}>
       <Body d={d} L={L} start={s.start} />
     </div>
   );
 };
 
 // Burned-in captions from beats: the hook is whole at frame 1, later lines come in word by word.
-const Captions = ({beats, t}: {beats: any[]; t: number}) => {
+const Captions = ({beats, t, style}: {beats: any[]; t: number; style: object}) => {
   const i = beats.findIndex((b, j) => t >= b.start && (t < endOf(b) || j === beats.length - 1));
   if (i < 0) return null;
   const b = beats[i], words = b.text.split(' ');
   const span = i === 0 ? 0 : Math.min((endOf(b) - b.start) * 0.55, words.length * 0.16);
   return (
-    <div className="cap">
+    <div className="cap" style={style}>
       {words.map((w: string, j: number) => (
         <span key={j} style={{opacity: i === 0 ? 1 : ease((t - b.start - (j * span) / words.length) / 0.12)}}>{w} </span>
       ))}
@@ -90,7 +108,8 @@ const Captions = ({beats, t}: {beats: any[]; t: number}) => {
 export const Video = (p: any) => {
   const frame = useCurrentFrame();
   const {fps, width, height, id, durationInFrames} = useVideoConfig();
-  const fmt = id.toLowerCase(), square = width === height, t = frame / fps, total = durationInFrames / fps;
+  const fmt = id.toLowerCase(), t = frame / fps, total = durationInFrames / fps;
+  const kind = width === height ? 'square' : height > width ? 'tall' : 'wide', lay = LAYOUT[kind];
   const brand = {
     ...brandFile, ...p.brand,
     colors: {...brandFile.colors, ...p.brand?.colors},
@@ -98,6 +117,7 @@ export const Video = (p: any) => {
   };
   useFonts(brand.fonts);
   const scenes = only(p.scenes, fmt), beats = only(p.beats, fmt), c = p.chrome ?? {};
+  const box = kind === 'wide' && !beats.length ? {...lay.box, left: (width - lay.box.width) / 2} : lay.box;
   const vars = {
     ...Object.fromEntries(Object.entries(brand.colors).map(([k, v]) => [`--${k}`, v])),
     '--display': `'${brand.type.display}', serif`,
@@ -112,14 +132,14 @@ export const Video = (p: any) => {
         const from = Math.round(s.start * fps);
         return (
           <Sequence key={i} from={from} durationInFrames={Math.max(1, Math.round(endOf(s) * fps) - from)} name={`${s.type} ${s.start}s`}>
-            <Scene s={s} square={square} last={endOf(s) >= total - 1 / fps} />
+            <Scene s={s} lay={lay} box={box} last={endOf(s) >= total - 1 / fps} />
           </Sequence>
         );
       })}
-      {c.title && <div className="brand" style={square ? {left: 64, top: 46, fontSize: 54} : {left: 72, top: 246, fontSize: 42}}>{rich(c.title)}</div>}
-      {c.tag && <div className="tag" style={square ? {right: 64, top: 70} : {right: 230, top: 262}}>{c.tag}</div>}
-      {c.footer && <div className="bottom" style={square ? {left: 64, bottom: 44} : {left: 72, top: 1404, width: 778, fontSize: 22}}>{c.footer}</div>}
-      {square && c.strip && (
+      {c.title && <div className="brand" style={lay.title}>{rich(c.title)}</div>}
+      {c.tag && <div className="tag" style={lay.tag}>{c.tag}</div>}
+      {c.footer && <div className="bottom" style={lay.footer}>{c.footer}</div>}
+      {kind === 'square' && c.strip && (
         // square only: cell i lights while scene i plays
         <div className="days" style={{left: 64, right: 64, top: 900}}>
           {c.strip.map((label: string, i: number) => {
@@ -128,8 +148,8 @@ export const Video = (p: any) => {
           })}
         </div>
       )}
-      {!square && <Captions beats={beats} t={t} />}
-      {p.guides && !square && UNSAFE.map(([left, top, w, h], i) => (
+      {lay.cap && <Captions beats={beats} t={t} style={lay.cap} />}
+      {p.guides && lay.unsafe?.map(([left, top, w, h]: number[], i: number) => (
         <div key={i} style={{position: 'absolute', left, top, width: w, height: h, background: 'rgba(255,0,0,.18)'}} />
       ))}
     </AbsoluteFill>
@@ -198,7 +218,7 @@ const CSS = `
 .days { position: absolute; display: flex; gap: 10px; }
 .day { flex: 1; font-family: var(--mono); font-size: 24px; text-align: center; padding: 10px 0; border-radius: 10px; border: 1.5px solid var(--line); color: var(--muted); }
 .day.done { color: var(--ink); } .day.on { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.cap { position: absolute; left: 72px; top: 330px; width: 778px; font-family: var(--display); font-size: 70px; line-height: 1.06; letter-spacing: -0.5px; }
+.cap { position: absolute; font-family: var(--display); line-height: 1.06; letter-spacing: -0.5px; }
 .screen { position: absolute; left: 42px; right: 42px; bottom: 38px; border-radius: 12px; overflow: hidden; background: var(--soft); }
 .face { position: absolute; border-radius: 50%; overflow: hidden; border: 6px solid var(--card);
   box-shadow: 0 30px 60px -30px color-mix(in oklch, var(--ink) 45%, transparent); }

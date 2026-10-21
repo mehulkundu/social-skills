@@ -1,7 +1,7 @@
 {
   "name": "video",
-  "description": "Optional add-on: social videos in your own brand, made with Remotion. Square for X and LinkedIn, Reels and Shorts, built from real skill output and your own footage. Needs Node 18+. Renders a file, you post it.",
-  "version": "1.0.0",
+  "description": "Optional add-on: social videos in your own brand, made with Remotion. Square, vertical and wide (1:1, 9:16, 16:9), built from real skill output and your own footage. Needs Node 18+. Renders a file, you post it.",
+  "version": "1.1.0",
   "author": {
     "name": "Mehul Kundu",
     "url": "https://github.com/mehulkundu"

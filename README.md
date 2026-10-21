@@ -215,8 +215,8 @@ Claude picks the right one.
 ## Optional add-on: video
 
 `/video` isn't one of the 50, and it's only installed if you ask for it. It
-turns what the other skills made into a video in your own brand: a 1080x1080
-square for X and LinkedIn, or a 1080x1920 Reel or Short. Captions come from
+turns what the other skills made into a video in your own brand: square
+(1:1), vertical (9:16) or wide (16:9), for wherever you post. Captions come from
 the `/ig-reel` beat sheet, and the cards show your real hook scores, READY
 cards and humanizer runs. Give it your own recordings, a talking head or a
 screen capture, and it lays the cards over them.
@@ -236,8 +236,9 @@ Two things are different about this one:
 
 - **It has dependencies.** It's the only plugin that does. It needs Node 18 or
   newer, and Remotion downloads its own headless Chrome the first time it
-  renders. The studio gets set up in your own repo, next to your `voice.md`,
-  never inside the plugin, so your brand, fonts and footage stay in your copy.
+  renders. The studio gets set up once per persona, at the root of its
+  project and never inside the plugin, so your brand, fonts and footage stay
+  in your copy.
 - **Remotion isn't OSI open source.** It's free for individuals, companies of
   up to 3 people and non-profits. Bigger companies need a
   [company licence](https://www.remotion.pro). The terms are in
