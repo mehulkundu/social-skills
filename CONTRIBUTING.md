@@ -29,7 +29,11 @@ platform, so change the copy (or copies) you mean to.
   belongs in the user's `voice.md`.
 - **Never invent facts.** Skills ask, or leave a `{{fact}}` gap.
 - **No dependencies.** Python tools use the standard library only and run with
-  plain `python3`.
+  plain `python3`. The optional `video` plugin is the one exception: it's a
+  Remotion project with exact versions pinned. It's copied into the user's
+  own repo and installed there, never inside the plugin. To check a change to
+  it, render the fixture from a scratch folder:
+  `bash plugins/video/skills/video/setup.sh /tmp/v && cd /tmp/v && npx remotion render Reel out/t.mp4 --props=<repo>/plugins/video/skills/video/fixtures/launch-reel.json`
 - **Write like a person.** Run your SKILL.md and README changes through
   `detect.py`. No em dashes.
 

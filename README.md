@@ -11,7 +11,7 @@ It does everything except press post.
 [![50 skills](https://img.shields.io/badge/skills-50-black.svg)](#whats-inside)
 [![No dependencies](https://img.shields.io/badge/python-no_dependencies-black.svg)](#the-tools)
 
-[Install](#install) · [What's inside](#whats-inside) · [Set up your voice](#set-up-your-voice) · [FAQ](#faq)
+[Install](#install) · [What's inside](#whats-inside) · [Video add-on](#optional-add-on-video) · [Set up your voice](#set-up-your-voice) · [FAQ](#faq)
 
 </div>
 
@@ -212,6 +212,37 @@ Claude picks the right one.
 
 </details>
 
+## Optional add-on: video
+
+`/video` isn't one of the 50, and it's only installed if you ask for it. It
+turns what the other skills made into a video in your own brand: a 1080x1080
+square for X and LinkedIn, or a 1080x1920 Reel or Short. Captions come from
+the `/ig-reel` beat sheet, and the cards show your real hook scores, READY
+cards and humanizer runs. Give it your own recordings, a talking head or a
+screen capture, and it lays the cards over them.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/mehulkundu/social-skills/main/install.sh | bash -s -- video
+```
+
+The agent writes one small `props.json` and [Remotion](https://www.remotion.dev)
+draws every frame, so a new video takes a few lines of JSON instead of a page
+of animation code. You watch it come together in Remotion Studio, where you
+can scrub it, try changes and render. Treat it as a starting point. Add music
+or speech captions in Instagram's Edits or CapCut if you like, then post it
+yourself.
+
+Two things are different about this one:
+
+- **It has dependencies.** It's the only plugin that does. It needs Node 18 or
+  newer, and Remotion downloads its own headless Chrome the first time it
+  renders. The studio gets set up in your own repo, next to your `voice.md`,
+  never inside the plugin, so your brand, fonts and footage stay in your copy.
+- **Remotion isn't OSI open source.** It's free for individuals, companies of
+  up to 3 people and non-profits. Bigger companies need a
+  [company licence](https://www.remotion.pro). The terms are in
+  [Remotion's licence](https://www.remotion.dev/license).
+
 ## Set up your voice
 
 The first time you run a writing skill, it asks for three to six of your own
@@ -280,7 +311,9 @@ No, on purpose. Every skill ends with a draft you copy. No API keys, no account
 access, nothing that can get you rate-limited or banned.
 
 **Does it need an API key or a paid service?**
-Only Claude Code itself. The skills and tools run locally.
+Only Claude Code itself. The skills and tools run locally. The one exception
+is the optional video add-on: a company of more than 3 people needs a
+Remotion licence to use it.
 
 **Will my posts sound like AI?**
 That's the problem this exists to solve. Drafts come from your voice file, facts

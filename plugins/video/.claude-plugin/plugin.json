@@ -1,0 +1,18 @@
+{
+  "name": "video",
+  "description": "Optional add-on: social videos in your own brand, made with Remotion. Square for X and LinkedIn, Reels and Shorts, built from real skill output and your own footage. Needs Node 18+. Renders a file, you post it.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Mehul Kundu",
+    "url": "https://github.com/mehulkundu"
+  },
+  "repository": "https://github.com/mehulkundu/social-skills",
+  "license": "MIT",
+  "keywords": [
+    "video",
+    "remotion",
+    "reels",
+    "shorts",
+    "social-media"
+  ]
+}

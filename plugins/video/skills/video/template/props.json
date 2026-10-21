@@ -1,0 +1,13 @@
+{
+  "format": "reel",
+  "fps": 30,
+  "chrome": {"title": "your name */* your show", "footer": "edit props.json and this reloads"},
+  "beats": [
+    {"start": 0, "end": 2.5, "text": "The hook is on screen at frame one."},
+    {"start": 2.5, "end": 6, "text": "Then one ask, and the viewer does the rest."}
+  ],
+  "scenes": [
+    {"type": "bigtype", "start": 0, "end": 2.5, "data": {"text": "Your hook.\n*Frame one.*"}},
+    {"type": "end", "start": 2.5, "end": 6, "data": {"line": "One ask\nat the end.", "button": "Follow", "sub": "they press it, not us"}}
+  ]
+}

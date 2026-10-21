@@ -33,6 +33,12 @@
       "description": "13 YouTube skills: scripts with scored hooks, title and thumbnail packaging, Shorts, SEO, chapters, edit lists, comments, community posts, retention, upload plans, niche research, channel pivots and audits.",
       "source": "./plugins/youtube",
       "category": "productivity"
+    },
+    {
+      "name": "video",
+      "description": "Optional add-on, not one of the 50: /video makes square videos, Reels and Shorts in your own brand with Remotion, from real skill output and your own footage. The only plugin with dependencies (Node 18+).",
+      "source": "./plugins/video",
+      "category": "productivity"
     }
   ]
 }

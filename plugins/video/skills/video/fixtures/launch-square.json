@@ -1,0 +1,228 @@
+{
+  "format": "square",
+  "fps": 24,
+  "chrome": {
+    "title": "social-skills */* your agent's week",
+    "tag": "real runs",
+    "footer": "50 Claude Code skills · X · LinkedIn · Instagram · YouTube",
+    "strip": [
+      "MON",
+      "TUE",
+      "WED",
+      "THU",
+      "FRI",
+      "SAT",
+      "SUN"
+    ]
+  },
+  "scenes": [
+    {
+      "type": "rows",
+      "start": 0.4,
+      "end": 3.0,
+      "data": {
+        "cmd": "/ig-viral",
+        "what": "find what's working",
+        "sub": "90 reels · 11 accounts · vs own median",
+        "foot": "→ swipe.md written",
+        "rows": [
+          {
+            "value": "725.9x",
+            "name": "no formula yet",
+            "handle": "@ll•••"
+          },
+          {
+            "value": "538.4x",
+            "name": "cultural switch",
+            "handle": "@sk•••"
+          },
+          {
+            "value": "336.5x",
+            "name": "cultural switch",
+            "handle": "@sk•••"
+          },
+          {
+            "value": "277.9x",
+            "name": "The Verbatim Question",
+            "handle": "@sk•••"
+          }
+        ]
+      }
+    },
+    {
+      "type": "week",
+      "start": 3.0,
+      "end": 5.6,
+      "data": {
+        "cmd": "/ig-plan",
+        "what": "plan the week",
+        "sub": "built from: voice.md, swipe.md",
+        "days": [
+          {
+            "day": "MON",
+            "time": "7:30pm",
+            "kind": "REEL",
+            "what": "#11 Numbered w/ Fav"
+          },
+          {
+            "day": "TUE",
+            "what": "stories + engage"
+          },
+          {
+            "day": "WED",
+            "what": "stories + engage"
+          },
+          {
+            "day": "THU",
+            "time": "7:30pm",
+            "kind": "REEL",
+            "what": "#20 Permission"
+          },
+          {
+            "day": "FRI",
+            "what": "stories + engage"
+          },
+          {
+            "day": "SAT",
+            "what": "stories + engage"
+          },
+          {
+            "day": "SUN",
+            "time": "1:00pm",
+            "kind": "REEL",
+            "what": "POV"
+          }
+        ]
+      }
+    },
+    {
+      "type": "hooks",
+      "start": 5.6,
+      "end": 8.2,
+      "data": {
+        "cmd": "/ig-reel",
+        "what": "hooks scored, script timed",
+        "foot": "beat sheet · 13 beats · 30.6s · loops on \"steal\"",
+        "hooks": [
+          {
+            "score": 81.4,
+            "verdict": "STRONG",
+            "text": "Nobody tells you your AI can run all 8 of your accounts."
+          },
+          {
+            "score": 79.6,
+            "verdict": "STRONG",
+            "text": "Steal the skills running my 8 accounts. Free.",
+            "tag": "shipped"
+          },
+          {
+            "score": 39.2,
+            "verdict": "WEAK",
+            "text": "One idea in. A week of posts out. Watch."
+          }
+        ]
+      }
+    },
+    {
+      "type": "ready",
+      "start": 8.2,
+      "end": 10.8,
+      "data": {
+        "cmd": "/x-thread · /li-post",
+        "what": "ready",
+        "cards": [
+          {
+            "title": "THREAD READY",
+            "fields": {
+              "formula": "X10 How-I teardown",
+              "tweets": "9 + 1 reply",
+              "longest": "273 / 280"
+            }
+          },
+          {
+            "title": "POST READY",
+            "fields": {
+              "hook": "#1 Contrarian Take",
+              "length": "1,598 characters",
+              "post at": "Thu 18:00 IST"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "human",
+      "start": 10.8,
+      "end": 13.4,
+      "data": {
+        "cmd": "/ig-human",
+        "what": "before you see it",
+        "sub": "reel script · a staged reveal, caught",
+        "before": "One long video? 7 days of posts.",
+        "after": "Give it one long video and get 7 days of posts.",
+        "from": 59.3,
+        "to": 78.5,
+        "pass": 70
+      }
+    },
+    {
+      "type": "lint",
+      "start": 13.4,
+      "end": 16.0,
+      "data": {
+        "cmd": "/yt-package",
+        "what": "title + thumbnail, linted",
+        "title": "How one AI runs my 8 social accounts",
+        "score": 100,
+        "note": "36 characters",
+        "checks": [
+          "fits a mobile feed whole",
+          "carries a concrete figure (8)",
+          "thumbnail doesn't repeat the title"
+        ]
+      }
+    },
+    {
+      "type": "rubric",
+      "start": 16.0,
+      "end": 18.6,
+      "data": {
+        "cmd": "/ig-profile",
+        "what": "scored, then rewritten",
+        "foot": "22 of 66 → bio, pins, link rewritten",
+        "rows": [
+          {
+            "label": "bio first line",
+            "got": 3,
+            "max": 12
+          },
+          {
+            "label": "bio body",
+            "got": 1,
+            "max": 8
+          },
+          {
+            "label": "pinned three",
+            "got": 0,
+            "max": 10
+          },
+          {
+            "label": "link",
+            "got": 5,
+            "max": 8
+          }
+        ]
+      }
+    },
+    {
+      "type": "end",
+      "start": 18.6,
+      "end": 22.0,
+      "data": {
+        "line": "Everything except\nthe post button.",
+        "button": "Post",
+        "sub": "that part's yours"
+      }
+    }
+  ]
+}
