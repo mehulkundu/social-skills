@@ -23,25 +23,49 @@ for four things and write them down:
 3. What actually happened this week - a client call, a number, a mistake, a
    thing they built, an argument they had. This is where posts come from.
 4. Ten to twenty people or companies worth being visible to.
+5. What they need most right now: more eyeballs, more followers, or more
+   leads. If the files exist but none of them says, ask this one.
 
 ## What to post
 
 Four posts a week beats seven. Consistency is a floor, not a target, and the
 fifth post of a week is almost always the weak one that drags the average.
 
-Mix across the week, never two of the same type back to back:
+Every post does one of three jobs. **Top** of the funnel is reach: as many new
+eyeballs as possible. **Middle** turns a reader into a follower. **Bottom**
+turns a follower into a lead or a customer. A post that tries to do two does
+neither.
 
-| type | share | job |
+| type | stage | job |
 | --- | --- | --- |
-| **Proof** | 1 per week | something that happened, with a number |
-| **Opinion** | 1 per week | a position that could lose you followers |
-| **Teach** | 1 per week | one thing the reader can do today |
-| **Story** | 1 per fortnight | a scene with dialogue and a cost |
-| **Offer** | 1 per fortnight | what you sell, said plainly, no apology |
+| **Rank** | top | a ranking, a tier list or a Q&A that someone outside the niche can follow |
+| **Opinion** | top | a position that could lose you followers |
+| **Teach** | middle | one thing the reader can do today |
+| **Story** | middle | your own story: a scene with dialogue and a cost |
+| **Proof** | middle | behind the scenes of how you actually work, with a number |
+| **Deep dive** | bottom | niche and technical, for the ideal customer only. Everyone else scrolling past is the point |
+| **Offer** | bottom | what you sell, said plainly, no apology |
 
-For each slot give: the theme, the specific angle drawn from what actually
-happened this week, and the hook formula number from `li-post/hooks.json` that
-fits it. Not a topic - an angle. "AI" is not a plan. "The proposal we lost
+Every week gets at least one post from each stage. The goal moves the weights:
+
+| goal | top | middle | bottom | when |
+| --- | --- | --- | --- | --- |
+| **Grow** | 2 | 1 | 1 | under 1K followers, or impressions are the problem |
+| **Balanced** | 1 | 2 | 1 | the default, and right for most creators |
+| **Sell** | 1 | 1 | 2 | the audience is there and nobody buys |
+
+With one bottom slot, alternate Deep dive and Offer week to week.
+
+If `log.md` has the numbers, they pick the goal. Few impressions: the top is
+failing, go Grow. Impressions but no follows: the middle is failing, stay
+Balanced and give the middle the week's best ideas. Followers but no DMs, leads
+or calls: the bottom is failing, go Sell. Judge each post by its own stage's
+number. A Deep dive with low impressions is working if it brought one lead.
+
+Never two of the same type back to back. For each slot give: the stage, the
+theme, the specific angle drawn from what actually happened this week, and the
+hook formula number from `li-post/hooks.json` that fits it. Not a topic - an
+angle. "AI" is not a plan. "The proposal we lost
 because our AI draft had an em dash in it" is a post.
 
 ## When to post
@@ -75,14 +99,15 @@ are what makes the user's own post land.
 
 ```
 WEEK OF SEP 8
+GOAL  balanced (1 top / 2 middle / 1 bottom) - no numbers in log.md yet
 
 MON  engage only  (20 min, list below)
-TUE  8:15am  PROOF    #17 Time Anchor   - the 5hr -> 20min proposal rebuild
+TUE  8:15am  MID  PROOF      #17 Time Anchor   - the 5hr -> 20min proposal rebuild
 WED  engage only
-THU  8:00am  OPINION  #1  Contrarian    - why we killed the discovery call
-FRI  8:30am  TEACH    #21 Direct Value  - the 4-line reopen email, given away
+THU  8:00am  TOP  OPINION    #1  Contrarian    - why we killed the discovery call
+FRI  8:30am  BOT  DEEP DIVE  #21 Direct Value  - the 4-line reopen email, line by line
 SAT  -
-SUN  4:00pm  STORY    #9  Cold Open     - the "going with someone cheaper" email
+SUN  4:00pm  MID  STORY      #9  Cold Open     - the "going with someone cheaper" email
 
 ENGAGE  (5 reach / 3 peers / 2 buyers)
   ...
