@@ -19,6 +19,8 @@ they don't, ask for:
 2. The three or four themes they want to be known for.
 3. Their follower count.
 4. 10 to 20 accounts worth being seen by.
+5. What they need most right now: more eyeballs, more followers, or more
+   leads. If the files exist but none of them says, ask this one.
 
 ## Cadence by size
 
@@ -33,9 +35,35 @@ posts.
 
 ## What to post
 
-Mix the themes and the goals across the week. Never the same theme twice in a
-row. Every slot gets an angle, not a topic: "design" isn't a plan, "the screen
-we cut and why" is. Give each slot a formula from `../x-post/hooks.md`.
+Every post does one of three jobs. **Top** of the funnel is reach: as many new
+eyeballs as possible. **Middle** turns a reader into a follower. **Bottom**
+turns a follower into a lead or a customer. A post that tries to do two does
+neither.
+
+| stage | what | formulas |
+| --- | --- | --- |
+| **top** | rankings, tier lists, hot takes, Q&As: anything a stranger gets in one read | X1, X2, X4, X5, X6 |
+| **middle** | how-tos, your own story, behind the scenes of how you actually work | X3, X7, X8, X9 |
+| **bottom** | niche and technical, for the ideal customer only, and the offer said plainly | X10, X11 |
+
+Every week gets at least one post from each stage. The goal moves the weights:
+
+| goal | top | middle | bottom | when |
+| --- | --- | --- | --- | --- |
+| **Grow** | 60% | 30% | 10% | under 1K, or impressions are the problem |
+| **Balanced** | 40% | 40% | 20% | the default, and right for most creators |
+| **Sell** | 30% | 40% | 30% | the audience is there and nobody buys |
+
+Replies count toward the top. If `log.md` has the numbers, they pick the goal.
+Few impressions: the top is failing, go Grow. Impressions but no follows: the
+middle is failing, stay Balanced and give the middle the week's best ideas.
+Followers but no DMs, leads or sales: the bottom is failing, go Sell. Judge
+each post by its own stage's number. A bottom thread with low impressions is
+working if it brought one lead.
+
+Never the same theme twice in a row. Every slot gets an angle, not a topic:
+"design" isn't a plan, "the screen we cut and why" is. Give each slot its stage
+and a formula from `../x-post/hooks.md`.
 
 ## When
 
@@ -54,9 +82,10 @@ who reply back) and community (organisers, groups, regulars in the niche).
 
 ```
 WEEK OF {date}
-MON  9:30am  X3 confession  {angle}        + 15 replies
-TUE  1:00pm  X5 mini-list   {angle}        + 15 replies
-WED  9:30am  THREAD X10     {angle}
+GOAL  grow (60 top / 30 middle / 10 bottom) - under 1K, impressions are the problem
+MON  9:30am  TOP  X5 mini-list   {angle}        + 15 replies
+TUE  1:00pm  MID  X3 confession  {angle}        + 15 replies
+WED  9:30am  BOT  THREAD X10     {angle}
 ...
 ENGAGE  8 reach / 8 peers / 4 community
 Say "write Monday" and I'll draft it.

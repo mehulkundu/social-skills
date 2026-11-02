@@ -10,7 +10,9 @@ description: >-
 # yt-plan
 
 A plan that does not fit the week is a list of regrets. Ask two questions before writing anything:
-**how many hours do you actually have**, and **what is already half-made**.
+**how many hours do you actually have**, and **what is already half-made**. If `voice.md` and
+`persona.md` don't say it, ask a third: **what does the channel need most right now: views,
+subscribers or leads**.
 
 ## Before you write
 
@@ -34,9 +36,35 @@ A plan that does not fit the week is a list of regrets. Ask two questions before
 Three uploads on a seven-day week, not seven. A plan that posts daily is not a plan anyone
 recognises, and the empty days are what make the filled ones survive a bad week.
 
+## Which job each upload does
+
+Every upload does one of three jobs. **Top** of the funnel is reach: as many new eyeballs as
+possible. **Middle** turns a viewer into a subscriber. **Bottom** turns a subscriber into a lead or
+a customer. A video that tries to do two does neither.
+
+- **Top:** rankings, tier lists, Q&As, anything a stranger can watch cold. Shorts are always top.
+- **Middle:** tutorials, your own story, behind the scenes of how you actually work.
+- **Bottom:** niche and technical, made for the ideal customer. Most viewers leaving is the point.
+
+The anchor's stage rotates across the month, and the goal sets how. The Shorts cover the top every
+week, so the cheap one takes the middle or the bottom, never the stage the anchor took.
+
+| goal | top anchors | middle anchors | bottom anchors | when |
+| --- | --- | --- | --- | --- |
+| **Grow** | 2 | 1 | 1 | views are the problem |
+| **Balanced** | 1 | 2 | 1 | the default, and right for most creators |
+| **Sell** | 1 | 1 | 2 | the subscribers are there and nobody buys |
+
+If the user shares their analytics, the numbers pick the goal. Low views: the top is failing, go
+Grow. Views but no subscribers: the middle is failing, stay Balanced and give the middle anchors
+the month's best ideas. Subscribers but no DMs, leads or sales: the bottom is failing, go Sell.
+Judge each video by its own stage's number. A bottom anchor with a tenth of the usual views is
+working if it brought one lead.
+
 ## What to hand back
 
-A table: day, format, working title, the one sentence it promises, and what already exists for it.
+The goal on the first line, and why. Then a table: day, format, stage, working title, the one
+sentence it promises, and what already exists for it.
 Then the honest line at the bottom - how many hours this costs, and what to drop first if the week
 goes wrong.
 

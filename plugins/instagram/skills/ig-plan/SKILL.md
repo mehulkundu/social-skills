@@ -26,6 +26,8 @@ If they do not exist, ask for four things and write them down:
 3. What actually happened this week: a client call, a number, a mistake, a
    thing they built, an argument they had. This is where posts come from.
 4. Ten accounts worth being visible to.
+5. What they need most right now: more eyeballs, more followers, or more
+   leads. If the files exist but none of them says, ask this one.
 
 ## What to post
 
@@ -34,20 +36,42 @@ format on Instagram that reliably reaches people who do not follow the account.
 Carousels go deep with the people who already do. Stories are daily and are
 planned separately.
 
-Mix across the week, never two of the same type back to back:
+Every post does one of three jobs. **Top** of the funnel is reach: as many new
+eyeballs as possible. **Middle** turns a viewer into a follower. **Bottom**
+turns a follower into a lead or a customer. A post that tries to do two does
+neither.
 
-| type | share | job |
+| type | stage | job |
 | --- | --- | --- |
-| **Proof** | 1 per week | something that happened, with a number. Reel. |
-| **Teach** | 1 to 2 per week | one thing the viewer can do today. Reel or carousel. |
-| **Opinion** | 1 per week | a position that could lose you followers. Reel. |
-| **Story** | 1 per fortnight | a scene with a cost. Reel. |
-| **Offer** | 1 per fortnight | what you sell, said plainly, no apology. Carousel or stories. |
+| **Rank** | top | a ranking, a tier list or a Q&A that someone who has never heard of you can watch. Reel. |
+| **Opinion** | top | a position that could lose you followers. Reel. |
+| **Teach** | middle | one thing the viewer can do today. Reel or carousel. |
+| **Story** | middle | your own story: a scene with a cost. Reel. |
+| **Proof** | middle | behind the scenes of how you actually work, with a number. Reel. |
+| **Deep dive** | bottom | niche and technical, for the ideal customer only. Everyone else scrolling past is the point. Carousel. |
+| **Offer** | bottom | what you sell, said plainly, no apology. Carousel or stories. |
 
-For each slot give: the theme, the specific angle from what actually happened
-this week, the format, and the hook formula number from `ig-reel/hooks.json`.
-Not a topic, an angle. "AI" is not a plan. "The proposal we lost because the
-draft had an em dash in it" is a Reel.
+Every week gets at least one post from each stage. The goal moves the weights:
+
+| goal | top / middle / bottom | at four posts | when |
+| --- | --- | --- | --- |
+| **Grow** | 3 / 1 / 1 | 2 / 1 / 1 | under 1K followers, or views are the problem |
+| **Balanced** | 2 / 2 / 1 | 1 / 2 / 1 | the default, and right for most creators |
+| **Sell** | 1 / 2 / 2 | 1 / 1 / 2 | the audience is there and nobody buys |
+
+With one bottom slot, alternate Deep dive and Offer week to week.
+
+If `log.md` has the numbers, they pick the goal. Few views: the top is failing,
+go Grow. Views but no follows: the middle is failing, stay Balanced and give the
+middle the week's best ideas. Followers but no DMs, leads or sales: the bottom
+is failing, go Sell. Judge each post by its own stage's number. A Deep dive
+with low views is working if it brought one lead.
+
+Never two of the same type back to back. For each slot give: the stage, the
+theme, the specific angle from what actually happened this week, the format,
+and the hook formula number from `ig-reel/hooks.json`. Not a topic, an angle.
+"AI" is not a plan. "The proposal we lost because the draft had an em dash in
+it" is a Reel.
 
 ## When to post
 
@@ -78,14 +102,15 @@ Hand the list to `/ig-comment`.
 
 ```
 WEEK OF SEP 15
+GOAL  balanced (2 top / 2 middle / 1 bottom) - views up, follows flat
 
 MON  engage only  (20 min, list below)
-TUE  7:30pm  REEL      PROOF    #5  Time Collapse   - 5hr proposal to 20 min
-WED  stories only + engage
-THU  7:00pm  CAROUSEL  TEACH    Job B caption       - the 4-slide clause breakdown
-FRI  7:30pm  REEL      OPINION  #2  Negative Command - stop doing discovery calls
+TUE  7:30pm  REEL      MID  PROOF      #5  Time Collapse      - 5hr proposal to 20 min
+WED  7:30pm  REEL      TOP  RANK       #11 Numbered Favourite - every proposal tool we tried, ranked
+THU  7:00pm  CAROUSEL  BOT  DEEP DIVE  #10 If This, Then Watch - the 4-slide clause breakdown
+FRI  7:30pm  REEL      TOP  OPINION    #2  Negative Command   - stop doing discovery calls
 SAT  -
-SUN  6:00pm  REEL      STORY    #21 Mid-Sentence    - the refund email
+SUN  6:00pm  REEL      MID  STORY      #21 Mid-Sentence       - the refund email
 
 STORIES  every day, 3 to 5 frames, question box on Thursday.
 
