@@ -1,8 +1,9 @@
 {
  "version": "1.0",
- "note": "21 hook formulas for YouTube. A YouTube hook is the first 15 seconds and it does three jobs: confirm the click the title promised, raise a question the viewer cannot close, and prove the payoff exists. A hook that only does the third is a summary and it leaks. Every formula here carries the shape, a worked example, the failure mode, and the patterns hookscore.py classifies transcribed speech against.",
+ "note": "21 hook formulas for YouTube. A YouTube hook is the first 15 seconds and it is a triple hook: context that confirms the click the title promised, a lean that raises a question and proves the payoff exists, and a snapback that turns the question somewhere the viewer did not expect. A hook that only proves the payoff is a summary and it leaks. Every formula here carries the shape, a worked example, the failure mode, and the patterns hookscore.py classifies transcribed speech against.",
  "rules": [
   "Confirm the title in the first sentence. A hook that ignores its own title is why people leave at 0:08.",
+  "A formula writes the hook line: the context and the lean. The line after it is the snapback, and no formula writes that for you. See 'The shape' in SKILL.md.",
   "One idea. A hook carrying two promises keeps neither.",
   "Specific beats big. '400 to 200,000 in seven months' outperforms 'massive growth'.",
   "Show the artifact inside 20 seconds if you promised one.",

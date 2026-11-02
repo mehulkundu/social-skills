@@ -24,8 +24,10 @@ reject one without reading the whole transcript.
 
 ## Writing each one
 
-- **A NEW first line.** The long video's line assumes context this viewer does not have. Write the
-  replacement and run it through `../yt-script/hookscore.py`.
+- **A NEW opening.** The long video's line assumes context this viewer does not have. Write it as
+  a triple hook (see "The shape" in `../yt-script/SKILL.md`): a first line that gives the context
+  and the lean, then a snapback. The span's own turn is often the snapback, pulled forward. Run the
+  first line through `../yt-script/hookscore.py`.
 - **On-screen text for the first two seconds**, different words from the spoken line.
 - **A loop point**: what the last line sets up so the first line answers it.
 - Vertical framing note - what gets cropped out of a 16:9 frame and whether that matters.

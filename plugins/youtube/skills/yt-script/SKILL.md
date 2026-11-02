@@ -31,11 +31,21 @@ python3 hookscore.py --hook "one line"      # score a single one
 
 ## The shape
 
-**The first 15 seconds is the whole job.** It does three things or the video leaks: confirm the
-click the title promised, open a question the viewer cannot close, and prove the payoff exists.
+**The first 15 seconds is the whole job.** Build it as a triple hook, in this order, or the video
+leaks:
 
-1. **Hook.** Write FIVE against [the 21 formulas](hooks.json), run them through `hookscore.py`,
-   keep the top two, and show the user both with their scores. Never hand over one hook.
+- **Context.** The first words confirm the click the title promised: what this video is about,
+  said out loud, on screen and in the shot. Not at the end of the first sentence. At the front.
+- **The lean.** Make them curious in one direction: a number that proves the payoff exists, a
+  pain they have or a result they want, or something they did not expect. Read the first one or
+  two sentences back alone. Is the topic obvious, and is there a reason to want the next one?
+- **The snapback.** Then turn against the way they were leaning: the obvious answer is wrong, the
+  result came from somewhere nobody looks. It re-opens the question where they did not expect it,
+  and that is what gets them past 0:30. It has to be true, and the body has to pay it off.
+
+1. **Hook.** Write FIVE against [the 21 formulas](hooks.json), each with its snapback line. Run
+   the hook lines, not the snapbacks, through `hookscore.py`, keep the top two that also pass the
+   read-back above, and show the user both with their scores. Never hand over one hook.
 2. **The turn** (0:15-0:45). Say what the video is going to do, in one sentence, and start doing it.
    No channel intro, no "before we get started", no subscribe pitch. Those are the single most
    common cause of the 0:30 cliff.
@@ -47,7 +57,7 @@ click the title promised, open a question the viewer cannot close, and prove the
 
 ## What to hand back
 
-- the two best hooks with their scored panels
+- the two best hooks with their scored panels, each with its snapback line
 - the script, beat by beat, with `[ON SCREEN: ...]` on every beat
 - the runtime estimate at 150 words per minute
 - one line naming which formula the winning hook used and why it fits this idea
